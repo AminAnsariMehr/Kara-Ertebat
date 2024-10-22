@@ -1,0 +1,11 @@
+@mixin typography($size, $weight) {
+  @if ($weight == 500) {
+    font-size: #{$size / 16}rem;
+    font-family: "IRANSans SemiBold";
+    font-weight: 500;
+  } @else {
+    font-size: #{$size / 16}rem;
+    font-family: "IRANSans Regular";
+    font-weight: 400;
+  }
+}

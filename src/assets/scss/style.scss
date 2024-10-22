@@ -1,5 +1,19 @@
+@import "./reset";
+@import "./fonts";
+@import "./variables";
+@import "./mixins";
+
 *,
 *::after,
 *::before {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+p {
+  @include typography(16, 400);
 }

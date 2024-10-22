@@ -1,6 +1,8 @@
 <style scoped></style>
 
-<template></template>
+<template>
+  <p>امین انصاری مهر</p>
+</template>
 
 <script>
 export default {};
