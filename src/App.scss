@@ -6,4 +6,6 @@
   background-color: #fefefe;
   border-radius: 25px;
   @include typography(100, 400);
+  @include elementLayout(column);
+  position: relative;
 }
