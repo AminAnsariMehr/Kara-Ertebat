@@ -1,0 +1,23 @@
+@import "./../../assets/scss/mixins";
+@import "./../../assets/scss/variables";
+
+.statusBar {
+  width: 369.64px;
+  height: 44px;
+  padding: 0 3.64px 0 5.64px;
+  background: red;
+  @include elementLayout(row, flex-start, center, 8);
+
+  i {
+    font-size: 14px;
+  }
+
+  &__signalIcon {
+    margin-left: auto;
+  }
+
+  &__timeIndicator {
+    color: $primary-color;
+    @include typography(14, 500);
+  }
+}

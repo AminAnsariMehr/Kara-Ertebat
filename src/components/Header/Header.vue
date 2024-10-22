@@ -1,7 +1,11 @@
-<style src="" lang="scss" scoped></style>
+<style src="./Header.scss" lang="scss" scoped></style>
 
-<template></template>
+<template>
+  <header class="header"></header>
+</template>
 
 <script>
-export default {};
+export default {
+  components: {},
+};
 </script>
