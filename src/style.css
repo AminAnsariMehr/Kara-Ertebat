@@ -150,10 +150,14 @@ table {
   border: none;
 }
 
-p {
-  font-size: 1rem;
-  font-family: "IRANSans Regular";
-  font-weight: 400;
+body {
+  height: 100vh;
+  background: #1e1e1e;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0rem;
 }
 
 /*# sourceMappingURL=style.css.map */

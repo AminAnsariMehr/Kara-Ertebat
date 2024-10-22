@@ -1,7 +1,7 @@
-<style scoped></style>
+<style src="./App.scss" lang="scss" scoped></style>
 
 <template>
-  <p>امین انصاری مهر</p>
+  <div class="container">amin</div>
 </template>
 
 <script>

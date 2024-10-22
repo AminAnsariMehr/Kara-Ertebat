@@ -1,0 +1,9 @@
+@import "./assets/scss/mixins";
+
+.container {
+  width: 428px;
+  height: 650px;
+  background-color: #fefefe;
+  border-radius: 25px;
+  @include typography(100, 400);
+}
