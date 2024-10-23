@@ -1,7 +1,7 @@
-@import "./reset";
-@import "./fonts";
-@import "./variables";
-@import "./mixins";
+@forward "./reset";
+@forward "./fonts";
+@forward "./variables";
+@forward "./mixins";
 
 *,
 *::after,
@@ -18,5 +18,5 @@
 body {
   height: 100vh;
   background: #1e1e1e;
-  @include elementLayout();
+  // @include elementLayout();
 }

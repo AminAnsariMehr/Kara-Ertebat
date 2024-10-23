@@ -1,5 +1,5 @@
-@import "./../../assets/scss/mixins";
-@import "./../../assets/scss/variables";
+@use "@scss/mixins";
+@use "@scss/variables";
 
 .statusBar {
   width: 369.64px;
@@ -7,7 +7,7 @@
   padding: 0 3.64px 0 5.64px;
   background: #fefefe;
 
-  @include elementLayout(row, flex-start, center, 8);
+  @include mixins.elementLayout(row, flex-start, center, 8);
 
   i {
     font-size: 14px;
@@ -18,7 +18,7 @@
   }
 
   &__timeIndicator {
-    color: $primary-color;
-    @include typography(14, 500);
+    color: variables.$primary-color;
+    @include mixins.typography(14, 500);
   }
 }

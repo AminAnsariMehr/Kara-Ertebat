@@ -8,8 +8,11 @@
     </div>
 
     <div class="header__userPanel">
-      <i class="fi fi-rr-marker"></i>
-      <i class="fi fi-rs-bell"></i>
+      <i class="fi fi-rs-bell header__notificationIcon"></i>
+      <div class="header__locationData">
+        <i class="fi fi-rr-marker header__locationIcon"></i>
+        <span class="header__locationName">تهران</span>
+      </div>
     </div>
   </header>
 </template>

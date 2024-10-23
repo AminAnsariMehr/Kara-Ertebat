@@ -1,16 +1,16 @@
-@import "./../../assets/scss/mixins";
-@import "./../../assets/scss/variables";
+@use "@scss/mixins";
+@use "@scss/variables";
 
 .searchBar {
   width: 381px;
   height: 55px;
   position: relative;
   margin: 1rem 0;
-  @include elementLayout();
+  @include mixins.elementLayout();
 
   &__searchIcon {
     font-size: 1.5rem;
-    color: $primary-color;
+    color: variables.$primary-color;
     position: absolute;
     top: 0;
     right: 20px;
@@ -24,11 +24,11 @@
     border: 1px solid #0f32601c;
     border-radius: 100px;
     box-shadow: 0px 1px 10px 0px #0f326033;
-    @include typography(16, 500);
+    @include mixins.typography(16, 500);
 
     &::placeholder {
-      color: $primary-color;
-      @include typography(16, 500);
+      color: variables.$primary-color;
+      @include mixins.typography(16, 500);
     }
   }
 }

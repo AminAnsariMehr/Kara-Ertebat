@@ -160,10 +160,6 @@ table {
 body {
   height: 100vh;
   background: #1e1e1e;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
