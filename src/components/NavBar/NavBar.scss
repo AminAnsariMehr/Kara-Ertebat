@@ -4,7 +4,7 @@
 .navigationBar {
   width: 100%;
   height: 88px;
-  background: red;
+  background: #fff;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -14,24 +14,91 @@
   width: 100%;
   height: 80px;
   background: aqua;
+  background: #fff;
+  border-radius: 24px;
+
   @include mixins.elementLayout(row, center, center, 8);
 
   &__menuItems {
     width: 70px;
     height: 75px;
-    background: purple;
     @include mixins.elementLayout(column, center, center, 12);
+
+    &--newPost {
+      position: relative;
+      top: -32px;
+      height: 90px;
+
+      .menu__menuIcon {
+        position: relative;
+        color: #fff;
+        width: 55px;
+        aspect-ratio: 1;
+        box-shadow: 0px 4px 12px 0px #0f326066;
+        outline: 15px solid #fff;
+        border-radius: 50%;
+        background: variables.$primary-color;
+        z-index: 5;
+        @include mixins.elementLayout(column, center, center, 0);
+
+        &::after {
+          content: "";
+          width: 25px;
+          aspect-ratio: 1;
+          position: absolute;
+          top: 20px;
+          left: 101%;
+          background: #fff;
+          //   background: red;
+          mask: radial-gradient(
+            12px 50% at top right,
+            #0000 calc(100% - 0.15px),
+            #000
+          );
+          z-index: 4;
+        }
+
+        &::before {
+          content: "";
+          width: 25px;
+          aspect-ratio: 1;
+          position: absolute;
+          top: 20px;
+          right: 102%;
+          background: #fff;
+          mask: radial-gradient(
+            12px 50% at top left,
+            #0000 calc(100% - 0.15px),
+            #000
+          );
+          z-index: 4;
+        }
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
-  &__linkItems {
-    // background: yellow;
+  &__menuTitle {
     color: variables.$secondary-color;
     @include mixins.typography(12, 400);
     @include mixins.elementLayout(row, center, center, 8);
+    user-select: none;
   }
 
-  &__menuIcons {
+  &__menuIcon {
     color: variables.$secondary-color;
     font-size: 1.5rem;
+    user-select: none;
   }
+}
+
+.menu__menuItems.activeTab .menu__menuIcon {
+  color: variables.$primary-color;
+}
+.menu__menuItems.activeTab .menu__menuTitle {
+  color: variables.$primary-color;
+  @include mixins.typography(12, 700);
 }

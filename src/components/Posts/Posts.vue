@@ -1,6 +1,8 @@
-<style src="" lang="scss" scoped></style>
+<style src="./Posts.scss" lang="scss" scoped></style>
 
-<template></template>
+<template>
+  <div class="posts"></div>
+</template>
 
 <script>
 export default {};

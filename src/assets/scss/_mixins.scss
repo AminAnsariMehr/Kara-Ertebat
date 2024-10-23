@@ -20,6 +20,9 @@
     font-size: #{calc($size / 16)}rem;
     font-family: "IRANSans SemiBold";
     font-weight: 500;
+  } @else if($weight == 700) {
+    font-size: #{calc($size / 16)}rem;
+    font-weight: 700;
   } @else {
     font-size: #{calc($size / 16)}rem;
     font-family: "IRANSans Regular";

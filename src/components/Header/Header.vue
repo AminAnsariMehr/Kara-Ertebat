@@ -3,7 +3,7 @@
 <template>
   <header class="header">
     <div class="header__titleApp">
-      <i class="fi fi-sr-menu-burger header__burgerIcon"></i>
+      <i class="fi fi-rr-menu-burger header__burgerIcon"></i>
       <h1 class="header__siteTitle">های ساخت</h1>
     </div>
 

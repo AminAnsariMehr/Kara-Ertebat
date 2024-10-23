@@ -3,25 +3,27 @@
 <template>
   <nav class="navigationBar">
     <ul class="menu">
-      <li class="menu__menuItems">
-        <i class="menu__menuIcons">a</i>
-        <span href="#" class="menu__linkItems">خانه</span>
+      <li class="menu__menuItems activeTab">
+        <i class="fa-solid fa-house menu__menuIcon"></i>
+        <span href="#" class="menu__menuTitle">خانه</span>
       </li>
       <li class="menu__menuItems">
-        <i class="menu__menuIcons">a</i>
-        <span href="#" class="menu__linkItems">تولید کنندگان</span>
+        <i class="fi fi-rr-apps-add menu__menuIcon"></i>
+        <span href="#" class="menu__menuTitle">تولید کنندگان</span>
+      </li>
+      <li class="menu__menuItems menu__menuItems--newPost">
+        <i class="fi fi-rs-add menu__menuIcon"></i>
+        <span href="#" class="menu__menuTitle menu__menuTitle--newPost"
+          >آگهی جدید</span
+        >
       </li>
       <li class="menu__menuItems">
-        <i class="menu__menuIcons">a</i>
-        <span href="#" class="menu__linkItems">آگهی جدید</span>
+        <i class="fi fi-rr-gallery menu__menuIcon"></i>
+        <span href="#" class="menu__menuTitle">نمایشگاه</span>
       </li>
       <li class="menu__menuItems">
-        <i class="menu__menuIcons">a</i>
-        <span href="#" class="menu__linkItems">نمایشگاه</span>
-      </li>
-      <li class="menu__menuItems">
-        <i class="menu__menuIcons">a</i>
-        <span href="#" class="menu__linkItems">پروفایل</span>
+        <i class="fi fi-rr-user menu__menuIcon"></i>
+        <span href="#" class="menu__menuTitle">پروفایل</span>
       </li>
     </ul>
   </nav>
