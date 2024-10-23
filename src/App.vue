@@ -3,7 +3,7 @@
 <template>
   <div class="container">
     <statusBar-component></statusBar-component>
-    <!-- <header-component></header-component> -->
+    <header-component></header-component>
     <searchBar-component></searchBar-component>
     <categoryBar-component></categoryBar-component>
     <posts-component></posts-component>

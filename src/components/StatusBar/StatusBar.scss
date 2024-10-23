@@ -5,7 +5,8 @@
   width: 369.64px;
   height: 44px;
   padding: 0 3.64px 0 5.64px;
-  background: red;
+  background: #fefefe;
+
   @include elementLayout(row, flex-start, center, 8);
 
   i {

@@ -1,10 +1,17 @@
 // ------ Element Horizontally ------
 @mixin elementLayout($dir: row, $justify: center, $align: center, $gap: 0) {
-  display: flex;
-  flex-direction: $dir;
-  justify-content: $justify;
-  align-items: $align;
-  gap: #{calc($gap/16)}rem;
+  @if ($gap == 0) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $justify;
+    align-items: $align;
+  } @else {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $justify;
+    align-items: $align;
+    gap: #{calc($gap/16)}rem;
+  }
 }
 
 // ------ Typography Properties ------
