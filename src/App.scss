@@ -7,8 +7,8 @@
   background-color: #fefefe;
   border-radius: 25px;
   border: 1px solid #b4b4b4;
-  position: relative;
   overflow: hidden;
+  position: relative;
   @include typography(100, 400);
   @include elementLayout(column, flex-start, center, 0);
 }
