@@ -12,6 +12,7 @@
 
   i {
     font-size: 14px;
+    color: variables.$primary-color;
   }
 
   &__signalIcon {
@@ -20,7 +21,6 @@
 
   &__timeIndicator {
     color: variables.$primary-color;
-    // @include mixins.typography(14, 500);
     font-family: "Vazir Number";
     font-size: 14px;
     font-weight: 500;

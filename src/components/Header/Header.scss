@@ -15,14 +15,12 @@
   &__titleApp {
     width: 127px;
     height: 24px;
-    // background: yellow;
     @include mixins.elementLayout(row, center, center, 8);
   }
 
   &__userPanel {
     width: 155px;
     height: 40px;
-    // background: purple;
     @include mixins.elementLayout(row, center, center, 8);
   }
 
@@ -32,6 +30,7 @@
 
   &__burgerIcon {
     font-size: 1.5rem;
+    @include mixins.elementLayout(row, center, center, 0);
   }
 
   &__notificationIcon {
@@ -39,7 +38,7 @@
     height: 40px;
     color: #fff;
     background-color: variables.$primary-color;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     border-radius: 50%;
     @include mixins.elementLayout(row, center, center, 8);
   }
@@ -49,7 +48,6 @@
     height: 40px;
     color: #fff;
     font-size: 1.5rem;
-    // background: deeppink;
     @include mixins.elementLayout(row, center, center, 0);
   }
 

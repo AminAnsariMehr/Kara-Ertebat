@@ -4,8 +4,6 @@
 @import url("https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css");
 @import url("https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css");
 @import url("https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-straight/css/uicons-bold-straight.css");
-@import url("https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css");
-@import url("https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css");
 html,
 body,
@@ -148,6 +146,15 @@ table {
   src: url("@assets/fonts/IRANSansXMedium.ttf") format("TrueType");
   font-weight: 500;
 }
+@font-face {
+  font-family: "IRANSans Bold";
+  src: url("@assets/fonts/IRANSansXBold.ttf") format("TrueType");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Vazir Number";
+  src: url("@assets/fonts/Vazirmatn-FD-SemiBold.ttf") format("TrueType");
+}
 *,
 *::after,
 *::before {
@@ -163,6 +170,9 @@ table {
 body {
   height: 100vh;
   background: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

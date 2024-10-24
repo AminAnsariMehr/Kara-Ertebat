@@ -12,7 +12,9 @@
         <span href="#" class="menu__menuTitle">تولید کنندگان</span>
       </li>
       <li class="menu__menuItems menu__menuItems--newPost">
-        <i class="fi fi-rs-add menu__menuIcon"></i>
+        <i class="fi fi-rs-add menu__menuIcon"
+          ><i class="menu__menuIcon--border"></i
+        ></i>
         <span href="#" class="menu__menuTitle menu__menuTitle--newPost"
           >آگهی جدید</span
         >

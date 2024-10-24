@@ -38,40 +38,38 @@
         outline: 15px solid #fff;
         border-radius: 50%;
         background: variables.$primary-color;
-        z-index: 5;
         @include mixins.elementLayout(column, center, center, 0);
 
-        &::after {
-          content: "";
-          width: 25px;
-          aspect-ratio: 1;
-          position: absolute;
-          top: 20px;
-          left: 101%;
-          background: #fff;
-          //   background: red;
-          mask: radial-gradient(
-            12px 50% at top right,
-            #0000 calc(100% - 0.15px),
-            #000
-          );
-          z-index: 4;
-        }
+        &--border {
+          &::after {
+            content: "";
+            width: 25px;
+            aspect-ratio: 1;
+            position: absolute;
+            top: 20px;
+            left: 101%;
+            background: #fff;
+            mask: radial-gradient(
+              12px 50% at top right,
+              #0000 calc(100% - 0.15px),
+              #000
+            );
+          }
 
-        &::before {
-          content: "";
-          width: 25px;
-          aspect-ratio: 1;
-          position: absolute;
-          top: 20px;
-          right: 102%;
-          background: #fff;
-          mask: radial-gradient(
-            12px 50% at top left,
-            #0000 calc(100% - 0.15px),
-            #000
-          );
-          z-index: 4;
+          &::before {
+            content: "";
+            width: 25px;
+            aspect-ratio: 1;
+            position: absolute;
+            top: 20px;
+            right: 102%;
+            background: #fff;
+            mask: radial-gradient(
+              12px 50% at top left,
+              #0000 calc(100% - 0.15px),
+              #000
+            );
+          }
         }
       }
     }
