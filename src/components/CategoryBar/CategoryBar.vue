@@ -2,91 +2,20 @@
 
 <template>
   <div class="postsWrapper">
-    <ul class="categoryBar" @click="clickCategoryHandler">
-      <!-- <li class="categoryBar__categoryItem categoryBar__categoryItem--selected">
-        <div class="categoryBar__imageWrapper">
-          <img
-            class="categoryBar__image"
-            src="./../../assets/decorations/loole.jpeg"
-          />
-        </div>
-        <span class="categoryBar__itemTitle">آهن آلات</span>
-      </li> -->
-
+    <ul class="categoryBar" id="categoryBar" @click="clickCategoryHandler">
       <li
-        class="categoryBar__categoryItem categoryBar__categoryItem"
+        class="categoryBar__categoryItem"
+        :class="{ 'categoryBar__categoryItem--selected': product.isActive }"
+        :id="product.id"
         v-for="product in products"
         :key="product"
+        @click="clickCategoryHandler"
       >
         <div class="categoryBar__imageWrapper">
           <img class="categoryBar__image" :src="product.img" />
         </div>
         <span class="categoryBar__itemTitle">{{ product.title }}</span>
       </li>
-
-      <!-- <li class="categoryBar__categoryItem">
-        <div class="categoryBar__imageWrapper">
-          <img
-            class="categoryBar__image"
-            src="./../../assets/decorations/cement.jpg"
-          />
-        </div>
-        <span class="categoryBar__itemTitle">گچ و سیمان</span>
-      </li>
-      <li class="categoryBar__categoryItem">
-        <div class="categoryBar__imageWrapper">
-          <img
-            class="categoryBar__image"
-            src="./../../assets/decorations/steel.jpg"
-          />
-        </div>
-        <span class="categoryBar__itemTitle">آلومینیوم</span>
-      </li>
-      <li class="categoryBar__categoryItem">
-        <div class="categoryBar__imageWrapper">
-          <img
-            class="categoryBar__image"
-            src="./../../assets/decorations/rock.jpeg"
-          />
-        </div>
-        <span class="categoryBar__itemTitle">انواع سنگ</span>
-      </li>
-      <li class="categoryBar__categoryItem">
-        <div class="categoryBar__imageWrapper">
-          <img
-            class="categoryBar__image"
-            src="./../../assets/decorations/timber.jpg"
-          />
-        </div>
-        <span class="categoryBar__itemTitle">چوب و تخته</span>
-      </li>
-      <li class="categoryBar__categoryItem">
-        <div class="categoryBar__imageWrapper">
-          <img
-            class="categoryBar__image"
-            src="./../../assets/decorations/timber.jpg"
-          />
-        </div>
-        <span class="categoryBar__itemTitle">چوب و تخته</span>
-      </li>
-      <li class="categoryBar__categoryItem">
-        <div class="categoryBar__imageWrapper">
-          <img
-            class="categoryBar__image"
-            src="./../../assets/decorations/timber.jpg"
-          />
-        </div>
-        <span class="categoryBar__itemTitle">چوب و تخته</span>
-      </li>
-      <li class="categoryBar__categoryItem">
-        <div class="categoryBar__imageWrapper">
-          <img
-            class="categoryBar__image"
-            src="./../../assets/decorations/timber.jpg"
-          />
-        </div>
-        <span class="categoryBar__itemTitle">چوب و تخته</span>
-      </li> -->
     </ul>
   </div>
 </template>
@@ -96,23 +25,115 @@ export default {
   data() {
     return {
       products: [
-        { img: "src/assets/decorations/loole.jpeg", title: "آهن آلات" },
-        { img: "src/assets/decorations/cement.jpg", title: "گچ و سیمان" },
-        { img: "src/assets/decorations/steel.jpg", title: "آلومینیوم" },
-        { img: "src/assets/decorations/rock.jpeg", title: "انواع سنگ" },
-        { img: "src/assets/decorations/timber.jpg", title: "چوب و تخته" },
-        { img: "src/assets/decorations/loole.jpeg", title: "آهن آلات" },
-        { img: "src/assets/decorations/cement.jpg", title: "گچ و سیمان" },
-        { img: "src/assets/decorations/steel.jpg", title: "آلومینیوم" },
-        { img: "src/assets/decorations/rock.jpeg", title: "انواع سنگ" },
-        { img: "src/assets/decorations/timber.jpg", title: "چوب و تخته" },
+        {
+          id: Math.random().toString(36).substring(2, 6),
+          img: "src/assets/decorations/loole.jpeg",
+          title: "آهن آلات",
+          isActive: true,
+        },
+        {
+          id: Math.random().toString(36).substring(2, 6),
+          img: "src/assets/decorations/cement.jpg",
+          title: "گچ و سیمان",
+          isActive: false,
+        },
+        {
+          id: Math.random().toString(36).substring(2, 6),
+          img: "src/assets/decorations/steel.jpg",
+          title: "آلومینیوم",
+          isActive: false,
+        },
+        {
+          id: Math.random().toString(36).substring(2, 6),
+          img: "src/assets/decorations/rock.jpeg",
+          title: "انواع سنگ",
+          isActive: false,
+        },
+        {
+          id: Math.random().toString(36).substring(2, 6),
+          img: "src/assets/decorations/timber.jpg",
+          title: "چوب و تخته",
+          isActive: false,
+        },
+        {
+          id: Math.random().toString(36).substring(2, 6),
+          img: "src/assets/decorations/loole.jpeg",
+          title: "آهن آلات",
+          isActive: false,
+        },
+        {
+          id: Math.random().toString(36).substring(2, 6),
+          img: "src/assets/decorations/cement.jpg",
+          title: "گچ و سیمان",
+          isActive: false,
+        },
+        {
+          id: Math.random().toString(36).substring(2, 6),
+          img: "src/assets/decorations/steel.jpg",
+          title: "آلومینیوم",
+          isActive: false,
+        },
+        {
+          id: Math.random().toString(36).substring(2, 6),
+          img: "src/assets/decorations/rock.jpeg",
+          title: "انواع سنگ",
+          isActive: false,
+        },
+        {
+          id: Math.random().toString(36).substring(2, 6),
+          img: "src/assets/decorations/timber.jpg",
+          title: "چوب و تخته",
+          isActive: false,
+        },
       ],
     };
   },
 
   methods: {
+    newProductActive(id) {
+      console.log(id);
+      const getNewProduct = this.products.filter((item) => {
+        return item.id === id;
+      });
+
+      // console.log((getNewProduct[0].isActive = true));
+      getNewProduct[0].isActive = true;
+    },
+
+    // ---------------
+
     clickCategoryHandler(e) {
-      console.log(e.target);
+      e.stopPropagation();
+
+      let productParent = e.target.parentElement;
+      let productId;
+
+      if (productParent.className === "categoryBar__imageWrapper") {
+        let productId = productParent.parentElement.id;
+        // console.log(productId);
+        this.newProductActive(productId);
+      } else {
+        let productId = productParent.id;
+        this.newProductActive(productId);
+      }
+
+      const productActives = this.products.filter((item) => {
+        return item.isActive === true;
+      });
+
+      productActives[0].isActive = false;
+
+      // function newProductActive(id) {
+      //   console.log(id);
+      //   const getNewProduct = this.products.filter((item) => {
+      //     return item.id === id;
+      //   });
+
+      //   console.log(getNewProduct);
+      // }
+
+      // ----------------------------
+      // console.log(this.products[0]);
     },
   },
 };
