@@ -29,6 +29,7 @@
     &::placeholder {
       color: variables.$primary-color;
       @include mixins.typography(16, 500);
+      user-select: none;
     }
   }
 }

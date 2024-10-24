@@ -1,25 +1,31 @@
 @use "@scss/mixins";
 @use "@scss/variables";
 
-.categoryBar {
+.postsWrapper {
   width: 100%;
-  height: 105.75px;
-  overflow-x: scroll;
+  overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  //   width: 1000px;
-  @include mixins.elementLayout(row, center, center, 12);
-  //   flex-wrap: wrap;
 
   &::-webkit-scrollbar {
     display: none;
   }
+}
+
+.categoryBar {
+  width: max-content;
+  height: 105.75px;
+  padding: 0 10px;
+  @include mixins.elementLayout(row, center, center, 12);
 
   &__categoryItem {
     width: 72px;
     height: 100%;
+    user-select: none;
     @include mixins.elementLayout(column, flex-start, center, 0);
-    // flex: 1;
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__imageWrapper {
@@ -30,7 +36,7 @@
 
     &::before {
       content: "";
-      width: 110%;
+      width: 100%;
       aspect-ratio: 1;
       background: linear-gradient(
         238.74deg,
@@ -38,12 +44,13 @@
         #f9373f 44.58%,
         #fecd00 91.55%
       );
+
       border-radius: 50%;
-      filter: grayscale(0);
+      filter: grayscale(1);
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      top: 0;
+      left: 0;
+      transition: 0.7s all ease-in-out;
     }
 
     &::after {
@@ -75,4 +82,8 @@
     @include mixins.typography(11.5, 500);
     @include mixins.elementLayout(row, center, center, 12);
   }
+}
+
+.categoryBar__categoryItem--selected .categoryBar__imageWrapper::before {
+  filter: grayscale(0);
 }

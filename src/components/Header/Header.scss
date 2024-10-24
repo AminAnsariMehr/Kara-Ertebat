@@ -26,6 +26,7 @@
 
   &__siteTitle {
     @include mixins.typography(20, 400);
+    user-select: none;
   }
 
   &__burgerIcon {
@@ -54,6 +55,7 @@
   &__locationName {
     color: #fff;
     @include mixins.typography(16, 500);
+    user-select: none;
   }
 
   &__locationData {
