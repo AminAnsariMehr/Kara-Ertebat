@@ -23,6 +23,7 @@
     width: 70px;
     height: 75px;
     @include mixins.elementLayout(column, center, center, 12);
+    position: relative;
 
     &--newPost {
       position: relative;
@@ -39,6 +40,7 @@
         border-radius: 50%;
         background: variables.$primary-color;
         @include mixins.elementLayout(column, center, center, 0);
+        height: auto;
 
         &--border {
           &::after {
@@ -84,12 +86,28 @@
     @include mixins.typography(12, 400);
     @include mixins.elementLayout(row, center, center, 8);
     user-select: none;
+
+    &::after {
+      content: "";
+      width: 17px;
+      height: 1.5px;
+      background: #fff;
+      position: absolute;
+      top: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   &__menuIcon {
     color: variables.$secondary-color;
     font-size: 1.5rem;
     user-select: none;
+    // background: deeppink;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -99,4 +117,12 @@
 .menu__menuItems.activeTab .menu__menuTitle {
   color: variables.$primary-color;
   @include mixins.typography(12, 700);
+}
+
+.menu__menuItems.activeTab .menu__menuTitle::after {
+  background: variables.$primary-color;
+}
+
+.menu__menuItems--newPost .menu__menuTitle::after {
+  display: none;
 }

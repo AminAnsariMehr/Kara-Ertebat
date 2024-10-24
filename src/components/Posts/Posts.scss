@@ -9,8 +9,11 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
   @include mixins.elementLayout(row, flex-start, flex-start, 3);
+  padding-bottom: 5.5rem;
+
   &::-webkit-scrollbar {
     display: none;
+    padding-bottom: 40px;
   }
 
   .pastWrapper {
