@@ -112,7 +112,7 @@ export default {
 
   methods: {
     clickCategoryHandler(e) {
-      console.log(e);
+      console.log(e.target);
     },
   },
 };
