@@ -16,7 +16,6 @@
   background: aqua;
   background: #fff;
   border-radius: 24px;
-
   @include mixins.elementLayout(row, center, center, 8);
 
   &__menuItems {
@@ -86,6 +85,7 @@
     @include mixins.typography(12, 400);
     @include mixins.elementLayout(row, center, center, 8);
     user-select: none;
+    transition: 0.7s all;
 
     &::after {
       content: "";
@@ -103,11 +103,11 @@
     color: variables.$secondary-color;
     font-size: 1.5rem;
     user-select: none;
-    // background: deeppink;
     height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.7s all;
   }
 }
 
