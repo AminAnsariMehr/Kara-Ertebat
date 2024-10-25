@@ -16,7 +16,10 @@
   background: aqua;
   background: #fff;
   border-radius: 24px;
-  @include mixins.elementLayout(row, center, center, 8);
+  // -------------------- Grid ---------------------
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  // -------------------- Grid ---------------------
 
   &__menuItems {
     width: 70px;
@@ -25,6 +28,10 @@
     position: relative;
 
     &--newPost {
+      // -------------------- Grid ---------------------
+      grid-column: 3 / 4;
+      grid-row: 1 / -1;
+      // -------------------- Grid ---------------------
       position: relative;
       top: -32px;
       height: 90px;
@@ -75,6 +82,20 @@
       }
     }
 
+    &--selected {
+      .menu__menuIcon {
+        color: variables.$primary-color;
+      }
+      .menu__menuTitle {
+        color: variables.$primary-color;
+        @include mixins.typography(12, 700);
+      }
+
+      .menu__menuTitle::after {
+        background: variables.$primary-color;
+      }
+    }
+
     &:hover {
       cursor: pointer;
     }
@@ -109,18 +130,6 @@
     align-items: center;
     transition: 0.7s all;
   }
-}
-
-.menu__menuItems.activeTab .menu__menuIcon {
-  color: variables.$primary-color;
-}
-.menu__menuItems.activeTab .menu__menuTitle {
-  color: variables.$primary-color;
-  @include mixins.typography(12, 700);
-}
-
-.menu__menuItems.activeTab .menu__menuTitle::after {
-  background: variables.$primary-color;
 }
 
 .menu__menuItems--newPost .menu__menuTitle::after {

@@ -3,14 +3,19 @@
 <template>
   <nav class="navigationBar">
     <ul class="menu">
-      <li class="menu__menuItems activeTab">
-        <i class="fa-solid fa-house menu__menuIcon"></i>
-        <span href="#" class="menu__menuTitle">خانه</span>
+      <li
+        v-for="item in menuItems"
+        :key="item.title"
+        @click="clickHandler(item.title)"
+        class="menu__menuItems"
+        :class="{
+          'menu__menuItems--selected': item.title === activeItem,
+        }"
+      >
+        <i :class="item.icon"></i>
+        <span href="#" class="menu__menuTitle">{{ item.title }}</span>
       </li>
-      <li class="menu__menuItems">
-        <i class="fi fi-rr-apps-add menu__menuIcon"></i>
-        <span href="#" class="menu__menuTitle">تولید کنندگان</span>
-      </li>
+
       <li class="menu__menuItems menu__menuItems--newPost">
         <i class="fi fi-rs-add menu__menuIcon"
           ><i class="menu__menuIcon--border"></i
@@ -19,18 +24,39 @@
           >آگهی جدید</span
         >
       </li>
-      <li class="menu__menuItems">
-        <i class="fi fi-rr-gallery menu__menuIcon"></i>
-        <span href="#" class="menu__menuTitle">نمایشگاه</span>
-      </li>
-      <li class="menu__menuItems">
-        <i class="fi fi-rr-user menu__menuIcon"></i>
-        <span href="#" class="menu__menuTitle">پروفایل</span>
-      </li>
     </ul>
   </nav>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      menuItems: [
+        {
+          icon: "fa-solid fa-house menu__menuIcon",
+          title: "خانه",
+        },
+        {
+          icon: "fi fi-rr-apps-add menu__menuIcon",
+          title: "تولید کنندگان",
+        },
+        {
+          icon: "fi fi-rr-gallery menu__menuIcon",
+          title: "نمایشگاه",
+        },
+        {
+          icon: "fi fi-rr-user menu__menuIcon",
+          title: "پروفایل",
+        },
+      ],
+      activeItem: "خانه",
+    };
+  },
+  methods: {
+    clickHandler(title) {
+      this.activeItem = title;
+    },
+  },
+};
 </script>
