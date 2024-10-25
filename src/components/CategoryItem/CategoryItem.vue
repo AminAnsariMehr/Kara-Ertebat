@@ -1,4 +1,4 @@
-<style src="./CategoryBarItem.scss" lang="scss" scoped></style>
+<style src="./CategoryItem.scss" lang="scss" scoped></style>
 <template>
   <li
     class="categoryBar__categoryItem"
